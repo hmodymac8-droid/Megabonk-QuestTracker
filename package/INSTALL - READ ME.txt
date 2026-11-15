@@ -1,0 +1,17 @@
+QUEST TRACKER - ALL-IN-ONE INSTALL (includes BepInEx)
+=====================================================
+
+1. In Steam, right-click Megabonk > Manage > Browse local files.
+2. Extract EVERYTHING from this zip into that folder
+   (so winhttp.dll and the BepInEx folder sit next to Megabonk.exe).
+3. Start the game. The first launch takes 1-2 minutes while BepInEx sets itself up. That's normal.
+
+That's it! In the Quests menu, hover a quest and press T to track it,
+or press F7 to open the quest list.
+
+Already have BepInEx 6 installed for other mods? Use the smaller "QuestTracker" zip instead.
+
+To remove all mods: delete winhttp.dll from the game folder.
+To remove only Quest Tracker: delete BepInEx\plugins\QuestTracker
+
+BepInEx is made by the BepInEx team (https://github.com/BepInEx/BepInEx), LGPL-2.1 license.

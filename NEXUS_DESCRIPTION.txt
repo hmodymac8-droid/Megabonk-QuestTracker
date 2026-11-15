@@ -1,0 +1,84 @@
+﻿=== NEXUS PAGE: paste the BBCode below into the mod's Description box ===
+
+Short summary (the "Brief overview" field):
+Pin any quest and track it live in-game, with a no-spoiler quest guide: where to play, how to finish it, and a compass to places you have found. Multiplayer-safe.
+
+----------------------------------------------------------------------
+
+[size=5][b]Quest Tracker[/b][/size]
+[i]Stop alt-tabbing to the quest menu. Pin a quest and watch it live while you bonk.[/i]
+
+[size=4][b]What it does[/b][/size]
+[list]
+[*][b]Track quests from anywhere[/b]: [b]double-click[/b] a quest in the main-menu quest list, a [b]locked skin[/b] in character select, or a locked item in the Unlocks shop. Or hover any quest and press [b]T[/b].
+[*][b]Move and resize it[/b]: press [b]F8[/b] and drag the panel wherever you like, then scroll to make it bigger or smaller. Hit the red button on a quest to untrack it.
+[*][b]No clutter[/b]: failed and completed quests disappear after a few seconds. Failed ones come back on your next stage or run.
+[*][b]Update notice[/b] (new in 1.2.0): once per launch it checks Nexus for a newer version and shows a small notice in the menus. Click it to open this page, or x to hide it. It never shows during runs, downloads nothing, and quietly skips if you are offline. Turn it off with [i]CheckForUpdates = false[/i] in the config.
+[*][b]Live progress[/b]: "10,840 / 12,500 · 1,660 left · +312 this run"
+[*][b]Countdown timers[/b] for timed quests (like Boss Buster): starts when the boss spawns, turns yellow then red, and tells you if you made it.
+[*][b]Pass / fail status[/b]: ON TRACK, HURRY!, FAILED (took damage, time's up), COMPLETE!
+[*][b]Quest list (F7)[/b]: search all quests and track them from anywhere.
+[*]Track up to [b]3 quests[/b] at once (configurable).
+[*]Your tracked quests are remembered between sessions.
+[/list]
+
+[size=4][b]Quest guide[/b] (new in 1.3.0)[/size]
+Helps you finish your tracked quests [b]without spoiling them[/b]:
+[list]
+[*][b]Where to play[/b]: the tracker shows the map, tier and stage a quest needs (only when it needs them), and warns you when a run won't count.
+[*][b]How to do it[/b]: hidden and multi-step quests get a short [b]How:[/b] line (Spooky Steve, Big Bob, the frogs, Monke, the crypts, pumpkins...).
+[*][b]Compass[/b]: during a run, a small arrow around your character points to the next step, but [b]only to places you have already found[/b]. Until then it just says what to look for ("Find the Boss Portal"). It never reveals hidden places, the Boss Portal or the exit portal before you discover them.
+[*]Inside a crypt it leads you to the exit first.
+[*][b]Timed boss quests[/b] ("kill the boss in under 6 minutes") tell you to find the Boss Portal and warn you when it's time to summon the boss.
+[*][b]F10[/b] shows or hides the guide.
+[/list]
+
+[size=4][b]Change your keys[/b] (new in 1.3.0)[/size]
+Press [b]F7[/b], then [b]Keys[/b]: click an action and press the new key. Keys the game uses are refused, and two Quest Tracker actions never share a key.
+
+[size=4][b]Multiplayer safe[/b][/size]
+Quest Tracker only [b]reads[/b] quest info and draws a panel and arrows. It never changes stats, spawns, items or RNG, so it works alongside [b]BonkWithFriends[/b] and [b]MegabonkTogether[/b]. Only you see the panel, and your friends don't need it installed.
+
+[size=4][b]Controls[/b][/size]
+[list]
+[*][b]Double-click[/b]: track / untrack a main-menu quest, locked skin or locked unlock
+[*][b]T[/b]: track / untrack whatever quest you're hovering (also works in the Quests menu)
+[*][b]F7[/b]: open the quest list
+[*][b]F8[/b]: move / resize the tracker (drag, scroll, [b]R[/b] to reset, [b]Esc[/b] when done)
+[*][b]F6[/b]: show / hide the tracker
+[*][b]F9[/b]: export all quests to BepInEx\QuestTracker_quests.tsv (for bug reports)
+[*][b]F10[/b]: show / hide the quest guide
+[/list]
+Change keys in game with [b]F7 > Keys[/b]. All keys, size and transparency can also be changed in [b]BepInEx\config\questtracker.megabonk.cfg[/b].
+
+[size=4][b]Installation[/b][/size]
+[b]New to modding? Download the "All-in-One" file[/b] (it includes BepInEx):
+[list=1]
+[*]In Steam: right-click Megabonk > Manage > Browse local files.
+[*]Extract the whole zip into that folder.
+[*]Launch the game. The first start takes 1-2 minutes while BepInEx sets up.
+[/list]
+
+[b]Already have BepInEx 6 (IL2CPP)?[/b] Download the main file and extract it into your Megabonk folder, or click [b]Mod Manager Download[/b] for Vortex.
+
+[b]Uninstall:[/b] delete [i]BepInEx\plugins\QuestTracker[/i].
+
+[size=4][b]Requirements[/b][/size]
+[url=https://builds.bepinex.dev/projects/bepinex_be]BepInEx 6 Bleeding Edge, IL2CPP x64[/url] (already included in the All-in-One file)
+
+[size=4][b]FAQ[/b][/size]
+[b]Nothing shows up?[/b] Make sure you've tracked a quest (T in the Quests menu, or F7). Check BepInEx\LogOutput.log for "Quest Tracker" and "loaded".
+[b]A timed quest shows no timer / the wrong timer?[/b] Send me your QuestTracker_quests.tsv (F9) and the quest name. You can also force a timer with TimerOverrides in the config.
+[b]Does it disable achievements or leaderboards?[/b] No. It doesn't change anything in the game.
+
+[b]Steam Deck / Linux (Proton)?[/b] BepInEx needs one launch option. In Steam: right-click Megabonk > Properties > Launch Options, and paste:
+[code]WINEDLLOVERRIDES="winhttp=n,b" %command%[/code]
+
+[size=4][b]Credits[/b][/size]
+Special thanks to [b]sensei[/b], my friend and teacher.
+Thanks to [b]pinkpomelo[/b], the [b]BepInEx team[/b] (mod loader), [b]Il2CppInterop[/b] (IL2CPP bridge), and [b]Harmony[/b] by Andreas Pardeike (pardeike).
+
+=== FILES TO UPLOAD ===
+Main file:     dist\QuestTracker-1.3.2.zip
+Optional file: dist\QuestTracker-1.3.2-AllInOne-with-BepInEx.zip  (name it "All-in-One (includes BepInEx)")
+Category: User Interface    Tags: UI, Quality of Life, Multiplayer compatible
