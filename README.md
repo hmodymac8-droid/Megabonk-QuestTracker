@@ -6,7 +6,7 @@ Players download it from:
 - [Nexus Mods](https://www.nexusmods.com/megabonk/mods/192) (main page, with an All-in-One zip that includes BepInEx)
 - [Thunderstore](https://thunderstore.io/c/megabonk/p/AhmedHus21/QuestTracker/) (for r2modman / Gale)
 
-![In-game tracker](media/in-game-tracker.jpg)
+![Quest Tracker](media/banner.webp)
 
 ## Features
 
